@@ -22,6 +22,12 @@
                 innerCard = document.getElementById("innerCard");
                 innerCard.style.transform = 'rotateY(0deg)';
             }
+            function resetGame(e) {
+                textLetters = document.getELementById("text-letters");
+                textLetters.innerHtml = "AND"
+                innerCard = document.getElementById("innerCard");
+                innerCard.style.transform = 'rotateY(360deg)';
+            }
         </script>
         
     </head>
@@ -29,6 +35,7 @@
     <div class="heading">
         <button id="btnStartGame" type="button" href='javascript:void();' onclick="startGame(event)">Click to Start Game</button>
         <button id="btnResetGame" type="button" href='javascript:void();' onclick="resetGame(event)">Click to Reset Game</button>
+        <button id="btnNewLetters" type="button" href='javascript:void();' onclick="getNewLetters(event)">Click to get new letters</button>
     </div>
         
     <div class="flip-card">
@@ -39,7 +46,7 @@
         </div>
         <div class="flip-card-back">
           <p>Your letters are...</p>
-          <h1>INT</h1>
+          <h1 id="text-letters" >INT</h1>
           <p> and can be used... </p>
             <a id="start-text" class="wordSection-Active">Start</a><a>&#x25CF;</a>
             <a id="middle-text" class="wordSection-Active"> Middle</a><a>&#x25CF;</a>
