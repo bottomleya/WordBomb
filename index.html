@@ -23,8 +23,7 @@
                 innerCard.style.transform = 'rotateY(0deg)';
             }
             function getNewLetters(e) {
-                textLetters = document.getElementById("text-letters");
-                textLetters.innerHtml = "AND";
+                document.getElementById("text-letters") = "AND";
                 innerCard = document.getElementById("innerCard");
                 innerCard.style.transform = 'rotateY(360deg)';
             }
@@ -46,7 +45,7 @@
         </div>
         <div class="flip-card-back">
           <p>Your letters are...</p>
-          <h1 id="text-letters" >INT</h1>
+          <h1 id="text-letters">INT</h1>
           <p> and can be used... </p>
             <a id="start-text" class="wordSection-Active">Start</a><a>&#x25CF;</a>
             <a id="middle-text" class="wordSection-Active"> Middle</a><a>&#x25CF;</a>
