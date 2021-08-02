@@ -12,14 +12,21 @@
 
         <title>WordBomb | Play with friends!</title>
         
+        <script>
+            function startGame(e) {
+                innerCard = document.getElementById("innerCard");
+                innerCard.style.transform = 'rotate(180deg)';
+            }
+        </script>
+        
     </head>
     <body>
     <div class="heading">
-        //<button id="btnStartGame" type="button" href='javascript:void();' onclick="startGame(event)">Click to Start Game</button>
+        <button id="btnStartGame" type="button" href='javascript:void();' onclick="startGame(event)">Click to Start Game</button>
     </div>
         
     <div class="flip-card">
-      <div class="flip-card-inner">
+      <div id="innerCard" class="flip-card-inner">
         <div class="flip-card-front">
           <h1>Click to flip</h1>
           <p>WordBomb</p>      
@@ -28,7 +35,7 @@
           <p>Your letters are...</p>
           <h1>INT</h1>
           <p> and can be used... </p>
-          <a> at the beginning & midle </a>
+          <a> at the beginning & middle </a>
         </div>
       </div>
     </div>
