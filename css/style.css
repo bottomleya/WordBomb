@@ -4,19 +4,19 @@ div {
 }
 
 div h1 {
-  line-height:5.0;
+  line-height:3.0;
   padding: 30px;
   font-weight:700;  
   font-size: 40px;
 }
 
-wordSection-Active {
+.wordSection-Active {
   font-weight:600;
   text-decoration: underline;
   opacity: 1;
 }
 
-wordSection-Inactive {
+.wordSection-Inactive {
   font-weight:300;
   text-decoration: None;
   opacity: 0.5;
