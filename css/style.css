@@ -9,6 +9,18 @@ div h1 {
   font-weight:700;  
 }
 
+div wordSection-Active {
+  font-weight:800;
+  text-decoration: underline;
+  opacity: 1;
+}
+
+div wordSection-Inactive {
+  font-weight:300;
+  text-decoration: None;
+  opacity: 0.5;
+}
+
 .heading {
   font-weight:400;
   line-height:1.7;
