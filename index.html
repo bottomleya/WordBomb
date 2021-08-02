@@ -17,12 +17,18 @@
                 innerCard = document.getElementById("innerCard");
                 innerCard.style.transform = 'rotateY(180deg)';
             }
+            
+            function resetGame(e) {
+                innerCard = document.getElementById("innerCard");
+                innerCard.style.transform = 'rotateY(-180deg)';
+            }
         </script>
         
     </head>
     <body>
     <div class="heading">
         <button id="btnStartGame" type="button" href='javascript:void();' onclick="startGame(event)">Click to Start Game</button>
+        <button id="btnResetGame" type="button" href='javascript:void();' onclick="resetGame(event)">Click to Reset Game</button>
     </div>
         
     <div class="flip-card">
