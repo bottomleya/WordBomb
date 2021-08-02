@@ -1,9 +1,6 @@
 div {
-  background: #c5e6fc;
   font-family:'Raleway', sans-serif;
-  color:#121212;
   text-align: center;
-  border-radius: 0px 0px 24px 24px;
 }
 
 .heading {
@@ -80,13 +77,13 @@ button:hover {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color: #ffe45c;
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: #ff6392;
   color: white;
   transform: rotateY(180deg);
 }
