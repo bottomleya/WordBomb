@@ -36,7 +36,7 @@
                 $("#flip-card").toggleClass("active-animatioon")
                 var timerCall = setInterval(function() {
                     timer.innerHTML = timer.innerHTML - 1;
-                    if (timer.innerHTTML < 1) {
+                    if (parseInt(timer.innerHTTML,10) < 1) {
                         stopTimer();   
                     }
                 }, 1000);
