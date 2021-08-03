@@ -85,18 +85,15 @@ button:hover {
 }
 
 .timer {
-  position: relative;
-  height: 300px;
-  width: 300px;
+  position: absolute;
+  height: 20px;
+  width: 20px;
   top: 0;
-  
-  /* Create a flexible box that centers content vertically and horizontally */
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Sort of an arbitrary number; adjust to your liking */
-  font-size: 48px;
+  font-size: 13px;
+  padding: 15px;
 }
 
 
