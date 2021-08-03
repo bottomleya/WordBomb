@@ -13,6 +13,7 @@
         <title>WordBomb | Play with friends!</title>
         
         <script>
+            var timerCall = null;
             function startGame(e) {
                 innerCard = document.getElementById("innerCard");
                 innerCard.style.transform = 'rotateY(180deg)';
@@ -34,7 +35,7 @@
             }
             function startTimer(e) {
                 $("#flip-card").toggleClass("active-animatioon")
-                var timerCall = setInterval(function() {
+                timerCall = setInterval(function() {
                     timer.innerHTML = timer.innerHTML - 1;
                     if (parseInt(timer.innerHTML,10) < 1) {
                         stopTimer();   
