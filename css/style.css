@@ -46,7 +46,16 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 5px dotted #62b0e4;
+  border: 5px #62b0e4;
+  stroke-dasharray: 50, 750;
+  stroke-dashoffset: 0;
+  padding: 20px;
+  animation: border 5s linear infinite;
+}
+@keyframes border {
+  to {
+    stroke-dashoffset: -800;
+  }
 }
 
 button {
