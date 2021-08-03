@@ -34,13 +34,16 @@
             }
             function startTimer(e) {
                 $("#flip-card").toggleClass("active-animatioon")
-                var seconds = 0;
-                setInterval(function() {
-                    timer.innerHTML = seconds++;
+                var timerCall = setInterval(function() {
+                    timer.innerHTML = timer.innerHTML - 1;
+                    if (timer.innerHTTML < 1) {
+                        stopTimer();   
+                    }
                 }, 1000);
             }
             function stopTimer(e) {
-                $("#flip-card").toggleClass("active-animatioon")
+                $("#flip-card").toggleClass("active-animatioon");
+                clearInterval(timerCall);
             }
         </script>
         
@@ -60,7 +63,7 @@
           <p>WordBomb</p>      
         </div>  
         <div class="flip-card-back">
-            <div id="timer" class="timer">0</div>
+            <div id="timer" class="timer">30</div>
           <p>Your letters are...</p>
           <h1 id="text-letters">INT</h1>
           <p> and can be used... </p>
