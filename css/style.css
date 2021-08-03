@@ -37,7 +37,7 @@ div h1 {
 }
 
 body { 
-  margin: 0;
+  margin: 20px;
   background-color: #f9f9f9;
   overflow: hidden;
   -webkit-touch-callout: none;
@@ -46,7 +46,7 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 5px dotted #62b0e4;
+  border: 10px dotted #62b0e4;
   padding: 20px;
 }
 
