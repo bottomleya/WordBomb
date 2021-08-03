@@ -31,6 +31,16 @@
                 document.getElementById("text-letters").innerHTML = selectLetters;
                 innerCard.style.transform = 'rotateY(-180deg)';
             }
+            function startTimer(e) {
+                $("#flip-card").toggleClass("active-animatioon")
+                var seconds = 0;
+                setInterval(function() {
+                    timer.innerHTML = seconds++;
+                }, 1000);
+            }
+            function stopTimer(e) {
+                $("#flip-card").toggleClass("active-animatioon")
+            }
         </script>
         
         
@@ -42,13 +52,14 @@
         <button id="btnNewLetters" type="button" href='javascript:void();' onclick="getNewLetters(event)">Click to get new letters</button>
     </div>
         
-    <div class="flip-card active-animatioon">
+    <div id="flip-card" class="flip-card ">
       <div id="innerCard" class="flip-card-inner">
         <div class="flip-card-front">
           <h2>Click to flip</h2>
           <p>WordBomb</p>      
-        </div>
+        </div>  
         <div class="flip-card-back">
+            <div id="timer" class="timer">0</div>
           <p>Your letters are...</p>
           <h1 id="text-letters">INT</h1>
           <p> and can be used... </p>
