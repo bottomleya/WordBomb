@@ -47,8 +47,6 @@ body {
   -ms-user-select: none;
   user-select: none;
   border: 5px dotted #62b0e4;
-  padding: 100%;
-  margin: 0;
 }
 
 button {
