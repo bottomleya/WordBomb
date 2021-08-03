@@ -163,7 +163,7 @@ button:hover {
   border-radius: 3px;
   width: 250px;
   padding: var(--field-padding);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .custom-field .placeholder {
@@ -172,7 +172,7 @@ button:hover {
   bottom: 50%;
   top: 22px;  
   transform: translateY(-50%);
-  width: calc(100% - 24px);  
+  width: auto;  
   color: #aaa;
   overflow: hidden;
   white-space: nowrap;
