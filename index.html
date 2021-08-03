@@ -36,14 +36,18 @@
                 $("#flip-card").toggleClass("active-animatioon")
                 var timerCall = setInterval(function() {
                     timer.innerHTML = timer.innerHTML - 1;
-                    if (parseInt(timer.innerHTTML,10) < 1) {
+                    if (parseInt(timer.innerHTML,10) < 1) {
                         stopTimer();   
                     }
                 }, 1000);
             }
             function stopTimer(e) {
                 $("#flip-card").toggleClass("active-animatioon");
+                $("#timer").innerHTML = "30"
                 clearInterval(timerCall);
+                
+                innerCard = document.getElementById("innerCard");
+                innerCard.style.transform = 'rotateY(0deg)';
             }
         </script>
         
