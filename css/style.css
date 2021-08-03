@@ -73,14 +73,14 @@ button:hover {
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 150px 10px, 150px 10px, 10px 150px, 10px 150px;
   background-position: left top, right bottom, left bottom, right   top;
-  animation: border-dance 1s infinite linear;
+  animation: border-dance 2s infinite linear;
 }
 @keyframes border-dance {
   0% {
     background-position: left top, right bottom, left bottom, right   top;
   }
   100% {
-    background-position: left 15px top, right 15px bottom , left bottom 15px , right   top 15px;
+    background-position: left 150px top, right 150px bottom , left bottom 150px , right   top 150px;
   }
 }
 
