@@ -164,6 +164,7 @@ button:hover {
   width: 250px;
   padding: var(--field-padding);
   font-size: 12px;
+  text-align:center;
 }
 
 .custom-field .placeholder {
