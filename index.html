@@ -62,10 +62,11 @@
             }
             function addPlayer(e) {
                 var newPlayerName = $("#newPlayerInput").value;
-                if (newPlayerName!="") {
+                console.log(newPlayerName);
+                if (newPlayerName != "") {
                     var newPlayerElement = document.createElement("p");
                     newPlayerElement.innerHTML = newPlayerName;
-                    newPlayerElement.onclick = "removePlayer(this)";
+                    newPlayerElement.onclick = removePlayer(this);
                     $("#playerList").append(newPlayerElement);
                 }
             }
