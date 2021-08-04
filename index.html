@@ -57,11 +57,15 @@
                     addPlayer(event); 
                 }
             });
+            function removePlayer(elem) {
+                elem.parentNode.removeChild(elem);
+            }
             function addPlayer(e) {
                 var newPlayerName = $("#newPlayerInput").value;
                 if !(newPlayerName=="") {
                     var newPlayerElement = document.createElement("p");
                     newPlayerElement.innerHTML = newPlayerName;
+                    newPlayerElement.onclick = "removePlayer(this)";
                     $("#playerList").append(newPlayerElement);
                 }
             }
