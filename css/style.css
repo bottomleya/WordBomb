@@ -188,7 +188,7 @@ button:hover {
 .add-button {
   border: none;
   background-color: inherit;
-  padding: 14px 28px;
+  padding: 28px 28px;
   font-size: 16px;
   cursor: pointer;
   display: inline-block;
@@ -196,12 +196,10 @@ button:hover {
   padding: 10px;
   margin: 15px;
   border-radius: 12px;
-  
+  color: black;
 }
 
 /* On mouse-over */
 .add-button:hover {background: #eee;}
 
-.success {color: green;}  
-}
 
