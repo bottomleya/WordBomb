@@ -50,6 +50,16 @@
                 innerCard = document.getElementById("innerCard");
                 innerCard.style.transform = 'rotateY(0deg)';
             }
+            
+            $('#addPlayerBtn').keypress(function(event){
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if(keycode == '13'){
+                    addPlayer(event); 
+                }
+            });
+            function addPlayer(e) {
+                $("#playerList").innerHTML = $("#playerList").innerHTML + "<p class=""playerName"">" + $("#newPlayerInput).innerHTML + "</p>";
+            }
         </script>
         
         
@@ -67,14 +77,16 @@
         <div class="flip-card-front">
           <h2>WordBomb</h2>
           <label class="custom-field">
-              <input type="text"/>
+              <input id="newPlayerInput" type="text"/>
               <span class="placeholder">Enter Player</span>
           </label>
-          <button id="addPlayer" class="add-button">&#43;</button>
-          <p class="playerName">Player 1</p>   
-          <p class="playerName">Player 2</p>
-          <p class="playerName">Player 3</p>
-          <p class="playerName">Player 4</p>   
+          <button id="addPlayerBtn" class="add-player-button" onclick="addPlayer(event)">&#43;</button>
+          <div id="playerList">
+              <p class="playerName">Player 1</p>   
+              <p class="playerName">Player 2</p>
+              <p class="playerName">Player 3</p>
+              <p class="playerName">Player 4</p>   
+          </div>
         </div>  
           
         <div class="flip-card-back">
