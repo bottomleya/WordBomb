@@ -62,7 +62,7 @@
             }
             function addPlayer(e) {
                 var newPlayerName = $("#newPlayerInput").value;
-                if !(newPlayerName=="") {
+                if (newPlayerName!="") {
                     var newPlayerElement = document.createElement("p");
                     newPlayerElement.innerHTML = newPlayerName;
                     newPlayerElement.onclick = "removePlayer(this)";
