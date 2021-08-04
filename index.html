@@ -108,12 +108,11 @@
     
     <script>
                
-    document.getElementById("newPlayerInput").keypress(function(event){
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13'){
-            addPlayer(event); 
+    var inputElement = document.getElementById("newPlayerInput");
+    inputElement.addEventListener("keydown", function(e) {
+        if(e.code === "Enter"){
+            addPlayer(e); 
         }
     });
-        
     </script>
 </html>
