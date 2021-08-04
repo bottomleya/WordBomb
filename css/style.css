@@ -189,9 +189,10 @@ button:hover {
   margin: 5px;
 }
 
-.playerList > p:onhover {
+.playerList > p:hover {
   text-decoration: line-through;
   color: #FF7700;
+  cursor: pointer;
 }
 
 .add-player-button {
