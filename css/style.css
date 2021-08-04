@@ -163,7 +163,7 @@ button:hover {
   border-radius: 3px;
   width: 250px;
   padding: var(--field-padding);
-  font-size: 12px;
+  font-size: 16px;
   text-align:center;
 }
 
@@ -182,12 +182,12 @@ button:hover {
   text-overflow: ellipsis;
 }
 
-.playerList p {
+.playerList > p {
   font-size: 10px;
   color: #606060;
 }
 
-.playerList p:onhover {
+.playerList > p:onhover {
   text-decoration: line-through;
   color: #FF7700;
 }
@@ -202,13 +202,16 @@ button:hover {
   display: inline-block;
   transition-duration: 0.4s;
   padding: 12px;
-  margin-top: 12px;
+  margin-top: 24px;
   margin-left: 5px;
   border-radius: 3px;
   color: black;
 }
 
 /* On mouse-over */
-.add-player-button:hover {background: #eee;}
+.add-player-button:hover {
+  background: #eee;
+  color: #62b0e4;
+}
 
 
