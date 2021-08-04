@@ -185,7 +185,7 @@ button:hover {
   
 }
 
-.add-button {
+.add-player-button {
   border: none;
   background-color: inherit;
   padding: 28px 28px;
@@ -200,6 +200,6 @@ button:hover {
 }
 
 /* On mouse-over */
-.add-button:hover {background: #eee;}
+.add-player-button:hover {background: #eee;}
 
 
