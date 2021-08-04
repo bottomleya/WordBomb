@@ -220,4 +220,12 @@ button:hover {
   color: #62b0e4;
 }
 
+.hs {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, calc(50% - 40px));
+  grid-template-rows: minmax(150px, 1fr);
+  padding: 0 20px;
+}
+
 
