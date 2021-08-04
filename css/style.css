@@ -174,7 +174,7 @@ button:hover {
   bottom: 50%;
   top: 22px;  
   transform: translateY(-50%);
-  width: 100%;  
+  width: 250px;  
   color: #aaa;
   overflow: hidden;
   white-space: nowrap;
