@@ -57,8 +57,10 @@
                     addPlayer(event); 
                 }
             });
-            function removePlayer(elem) {
-                console.log(elem);//elem.parentNode.removeChild(elem);
+            function removePlayer() {
+                console.log(this);//elem.parentNode.removeChild(elem);
+                this.parentNode.removeChild(this);
+                //this.parentNode.remove();
             }
             function addPlayer(e) {
                 var newPlayerName = document.getElementById("newPlayerInput").value;
@@ -66,7 +68,7 @@
                 if (newPlayerName != "") {
                     var newPlayerElement = document.createElement("p");
                     newPlayerElement.innerHTML = newPlayerName;
-                    newPlayerElement.addEventListener("click", removePlayer(e));
+                    newPlayerElement.addEventListener("click", removePlayer, false););
                     newPlayerElement.onclick = "removePlayer(this)";
                     $("#playerList").append(newPlayerElement);
                 }
