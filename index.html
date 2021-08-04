@@ -58,7 +58,10 @@
                 }
             });
             function addPlayer(e) {
-                $("#playerList").innerHTML = $("#playerList").innerHTML + "<p class='playerName'>" + $("#newPlayerInput).innerHTML + "</p>";
+                var newPlayerElement = document.createElement("p");
+                newPlayerElement.innerHTML = $("#newPlayerInput).innerHTML;
+                newPlayerElement.classList.add("playerName");
+                $("#playerList").append(newPlayerElement);
             }
         </script>
         
