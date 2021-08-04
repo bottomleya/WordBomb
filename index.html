@@ -58,7 +58,6 @@
             }
             function addPlayer(e) {
                 var newPlayerName = document.getElementById("newPlayerInput").value;
-                console.log(newPlayerName);
                 if (newPlayerName != "") {
                     var newPlayerElement = document.createElement("p");
                     newPlayerElement.innerHTML = newPlayerName;
@@ -109,7 +108,7 @@
     
     <script>
                
-    document.getElementById("addPlayerBtn").keypress(function(event){
+    document.getElementById("newPlayerInput").keypress(function(event){
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == '13'){
             addPlayer(event); 
