@@ -58,10 +58,12 @@
                 }
             });
             function addPlayer(e) {
-                var newPlayerElement = document.createElement("p");
-                newPlayerElement.innerHTML = $("#newPlayerInput").innerHTML;
-                newPlayerElement.classList.add("playerName");
-                $("#playerList").append(newPlayerElement);
+                var newPlayerName = $("#newPlayerInput").value;
+                if !(newPlayerName=="") {
+                    var newPlayerElement = document.createElement("p");
+                    newPlayerElement.innerHTML = newPlayerName;
+                    $("#playerList").append(newPlayerElement);
+                }
             }
         </script>
         
@@ -84,11 +86,7 @@
               <span class="placeholder">Enter Player</span>
           </label>
           <button id="addPlayerBtn" class="add-player-button" onclick="addPlayer(event)">&#43;</button>
-          <div id="playerList">
-              <p class="playerName">Player 1</p>   
-              <p class="playerName">Player 2</p>
-              <p class="playerName">Player 3</p>
-              <p class="playerName">Player 4</p>   
+          <div id="playerList">  
           </div>
         </div>  
           
