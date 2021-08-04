@@ -168,6 +168,14 @@ button:hover {
   height: 42px;
 }
 
+
+.custom-field:focus~.placeholder,
+.custom-field:valid~.placeholder {
+  font-size: 14px;
+  top: -24px;
+  color: #00dd22;
+}
+
 .custom-field .placeholder {
   position: absolute;
   top: 0;
