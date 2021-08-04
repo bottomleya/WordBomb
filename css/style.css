@@ -185,6 +185,7 @@ button:hover {
 .playerList > p {
   font-size: 10px;
   color: #606060;
+  margin: 5px;
 }
 
 .playerList > p:onhover {
