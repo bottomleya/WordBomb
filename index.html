@@ -66,6 +66,7 @@
                 if (newPlayerName != "") {
                     var newPlayerElement = document.createElement("p");
                     newPlayerElement.innerHTML = newPlayerName;
+                    newPlayerElement.addEventListener("click", remotePlayer(e));
                     newPlayerElement.onclick = "removePlayer(this)";
                     $("#playerList").append(newPlayerElement);
                 }
