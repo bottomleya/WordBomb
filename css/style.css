@@ -181,8 +181,14 @@ button:hover {
   text-overflow: ellipsis;
 }
 
-.playerName {
-  
+.playerList p {
+  font-size: 10px;
+  color: #606060;
+}
+
+.playerList p:onhover {
+  text-decoration: line-through;
+  color: #FF7700;
 }
 
 .add-player-button {
