@@ -61,7 +61,7 @@
                 elem.parentNode.removeChild(elem);
             }
             function addPlayer(e) {
-                var newPlayerName = $("#newPlayerInput").value;
+                var newPlayerName = document.getElementById("newPlayerInput").value;
                 console.log(newPlayerName);
                 if (newPlayerName != "") {
                     var newPlayerElement = document.createElement("p");
