@@ -221,8 +221,9 @@ button:hover {
 }
 
 .hs {
-  display: inline-block;
-  margin:auto;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
 
 
