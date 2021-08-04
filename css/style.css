@@ -202,7 +202,8 @@ button:hover {
   display: inline-block;
   transition-duration: 0.4s;
   padding: 12px;
-  margin: 5px;
+  margin-top: 12px;
+  margin-left: 5px;
   border-radius: 3px;
   color: black;
 }
