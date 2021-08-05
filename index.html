@@ -37,7 +37,9 @@
             }
             function startTimer(e) {
                 timer.innerHTML = 30;
-                $("#flip-card").toggleClass("active-animatioon")
+                $("#flip-card").toggleClass("active-animatioon");
+                document.getElementById("btnStartTimer").style.visibility = "hidden";
+                
                 timerCall = setInterval(function() {
                     timer.innerHTML = timer.innerHTML - 1;
                     if (parseInt(timer.innerHTML,10) < 1) {
@@ -50,8 +52,7 @@
                 $("#timer").innerHTML = "30"
                 clearInterval(timerCall);
                 
-                innerCard = document.getElementById("innerCard");
-                innerCard.style.transform = 'rotateY(0deg)';
+                document.getElementById("btnStartTimer").style.visibility = "visible";
             }
             
             function removePlayer() {
@@ -104,17 +105,20 @@
               <div> Next Player 1 </div>
               <div> Next Player 2 </div>
           </div>
-          <p> to use at... </p>
+          <p> Letters can be used in </p>
           <a id="start-text" class="wordSection-Active">Start</a>
             <a>&#x25CF;</a>
           <a id="middle-text" class="wordSection-Active"> Middle</a>
             <a>&#x25CF;</a>
           <a id = "end-text" class="wordSection-Inactive">End</a>
              </br>
+        </br>
         <button id="btnStartTimer" type="button" href='javascript:void();' onclick="startTimer(event)">Click to Start Timer</button>
-        </div>
+        <div id="round-letters">
             <p>Your letters are...</p>
           <h1 id="text-letters">INT</h1>
+        </div>
+        </div>
       </div>
     </div>
         
