@@ -18,7 +18,6 @@
             
             
             function startGame(e) {
-                timer.innerHTML = 30;
                 innerCard = document.getElementById("innerCard");
                 innerCard.style.transform = 'rotateY(180deg)';
             }
@@ -37,6 +36,7 @@
                 innerCard.style.transform = 'rotateY(-180deg)';
             }
             function startTimer(e) {
+                timer.innerHTML = 30;
                 $("#flip-card").toggleClass("active-animatioon")
                 timerCall = setInterval(function() {
                     timer.innerHTML = timer.innerHTML - 1;
@@ -85,6 +85,7 @@
         <div class="flip-card-front">
           <h2>WordBomb</h2>
         <button id="btnStartGame" type="button" href='javascript:void();' onclick="startGame(event)">Click to Start Game</button>
+            </br>
           <button class="add-player-button" visibility="hidden"></button>
           <label class="custom-field">
               <input id="newPlayerInput" type="text" placeholder="Enter Player...">
@@ -109,7 +110,7 @@
           <a id="middle-text" class="wordSection-Active"> Middle</a>
             <a>&#x25CF;</a>
           <a id = "end-text" class="wordSection-Inactive">End</a>
-            
+             </br>
         <button id="btnStartTimer" type="button" href='javascript:void();' onclick="startTimer(event)">Click to Start Timer</button>
         </div>
             <p>Your letters are...</p>
