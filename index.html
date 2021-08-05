@@ -21,7 +21,6 @@
                 timer.innerHTML = 30;
                 innerCard = document.getElementById("innerCard");
                 innerCard.style.transform = 'rotateY(180deg)';
-                startTimer();
             }
             
             function resetGame(e) {
@@ -76,7 +75,6 @@
     </head>
     <body>
     <div class="heading">
-        <button id="btnStartGame" type="button" href='javascript:void();' onclick="startGame(event)">Click to Start Game</button>
         <button id="btnResetGame" type="button" href='javascript:void();' onclick="resetGame(event)">Click to Reset Game</button>
         <button id="btnNewLetters" type="button" href='javascript:void();' onclick="getNewLetters(event)">Click to get new letters</button>
     </div>
@@ -86,6 +84,7 @@
           
         <div class="flip-card-front">
           <h2>WordBomb</h2>
+        <button id="btnStartGame" type="button" href='javascript:void();' onclick="startGame(event)">Click to Start Game</button>
           <button class="add-player-button" visibility="hidden"></button>
           <label class="custom-field">
               <input id="newPlayerInput" type="text" placeholder="Enter Player...">
@@ -97,8 +96,6 @@
           
         <div class="flip-card-back">
             <div id="timer" class="timer">30</div>
-          <p>Your letters are...</p>
-          <h1 id="text-letters">INT</h1>
           <div id="playerSelector" class="hs">
               <div> Previous Player 2 </div>
               <div> Previous Player 1 </div>
@@ -106,11 +103,17 @@
               <div> Next Player 1 </div>
               <div> Next Player 2 </div>
           </div>
-          <p> and can be used... </p>
-          <a id="start-text" class="wordSection-Active">Start</a><a>&#x25CF;</a>
-          <a id="middle-text" class="wordSection-Active"> Middle</a><a>&#x25CF;</a>
+          <p> to use at... </p>
+          <a id="start-text" class="wordSection-Active">Start</a>
+            <a>&#x25CF;</a>
+          <a id="middle-text" class="wordSection-Active"> Middle</a>
+            <a>&#x25CF;</a>
           <a id = "end-text" class="wordSection-Inactive">End</a>
+            
+        <button id="btnStartTimer" type="button" href='javascript:void();' onclick="startTimer(event)">Click to Start Timer</button>
         </div>
+            <p>Your letters are...</p>
+          <h1 id="text-letters">INT</h1>
       </div>
     </div>
         
