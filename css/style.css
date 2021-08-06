@@ -1,55 +1,6 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-.container {
-    overflow:hidden;
-    background-color:#ddd;
-    padding:5px;
-    padding-bottom:7px;
-}
-.user {
-    float:left;
-    background-color:#ddd;
-    margin-top:2px;
-    padding:5px;
-}
-.user:after {
-    content:":";
-}
-.selectOptions {
-    float:left;
-    margin-left:5px;
-}
-.select {
-    border:2px solid #333;
-    padding:5px;
-    text-align:center;
-    position:absolute;
-    background-color:#ddd;
-}
-.select:hover {
-    background-color:grey;
-    cursor:pointer;
-}
-.myOptions {
-    position:absolute;
-    top:45px;
-    /*42px (height of .select + (padding*2) minus border thickness*/
-    border:2px solid #333;
-    display:none;
-    background-color:#ddd;
-}
-.option {
-    display:inline-block;
-    padding:5px;
-}
-.option:not(:first-of-type) {
-    margin-left:-5px;
-}
-.option:hover {
-    background-color:#123456;
-    cursor:pointer;
-}
 div {
   font-family:'Raleway', sans-serif;
   text-align: center;
