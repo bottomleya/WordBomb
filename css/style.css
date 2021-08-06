@@ -23,10 +23,10 @@ div h2 {
 }
 
 .round-letters .pre-animation {
-  transition: all 1s;
+  transition: all 0.5s;
   opacity:0;
   max-height: 0;
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 .wordSection-Active {
