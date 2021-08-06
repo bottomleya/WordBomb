@@ -13,11 +13,18 @@ div h2 {
   font-size: 40px;
 }
 
-div h1 {
+.round-letters {
   padding: 10px;
   font-weight:800;  
   font-size: 70px;
   margin: 20px;
+  transition: all 1s;
+  max-height: 300px;
+}
+
+.round-letters .pre-animation {
+  opacity:0;
+  max-height: 0;
 }
 
 .wordSection-Active {
