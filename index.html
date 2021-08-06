@@ -15,7 +15,28 @@
         <script>
             var timerCall = null;
             
-            
+            function changeOrder() {
+              const allSlides = document.querySelectorAll(".single-slide");
+              const previous = "1";
+              const current = "2";
+              const next = "3";
+
+              for (const slide of allSlides) {
+                const order = slide.getAttribute("data-order");
+
+                switch (order) {
+                  case current:
+                    slide.setAttribute("data-order", previous);
+                    break;
+                  case next:
+                    slide.setAttribute("data-order", current);
+                    break;
+                  case previous:
+                    slide.setAttribute("data-order", next);
+                    break;
+                }
+              }
+            }
             
             function startGame(e) {
                 innerCard = document.getElementById("innerCard");
@@ -105,6 +126,21 @@
         <div class="flip-card-back">
             <div id="timer" class="timer">30</div>
         <button id="btnStartTimer" type="button" href='javascript:void();' onclick="startTimer(event)">Round 1 Start</button>
+        <button id="btnNextPlayer" type="button" href='javascript:void();' onclick="changeOrder(event)">Next Player</button>
+            <div class="all-slides">
+              <div class="single-slide" data-order="2">
+                <h3>First slide </h3>
+                <p>Some text</p>
+              </div>
+              <div class="single-slide" data-order="3">
+                <h3>Second slide</h3>
+                <p>Some other text</p>
+              </div>
+              <div class="single-slide" data-order="1">
+                <h3>Third slide</h3>
+                <p>Yet some other text</p>
+              </div>
+            </div>
           <div id="playerSelector" class="hs">
               <div> Previous Player 2 </div>
               <div> Previous Player 1 </div>
@@ -112,18 +148,6 @@
               <div> Next Player 1 </div>
               <div> Next Player 2 </div>
           </div>
-            <div class="container"><span class="user">User 1</span>
-
-            <div class="selectOptions">
-                <div class="myOptions">
-                    <div class="option volvo">Volvo</div>
-                    <div class="option saab">Saab</div>
-                    <div class="option mercedes">Mercedes</div>
-                    <div class="option audi">Audi</div>
-                </div>
-                <div class="select user1">User 1</div>
-            </div>
-        </div>
           <p> Letters can be used in </p>
           <a id="start-text" class="wordSection-Active">Start</a>
             <a>&#x25CF;</a>
