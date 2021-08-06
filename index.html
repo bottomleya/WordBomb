@@ -27,13 +27,18 @@
                 innerCard.style.transform = 'rotateY(0deg)';
             }
             function getNewLetters(e) {
-                innerCard = document.getElementById("innerCard");
-                innerCard.style.transform = 'rotateY(180deg)';
+                //innerCard = document.getElementById("innerCard");
+                //innerCard.style.transform = 'rotateY(180deg)';
                 // https://www.sporcle.com/games/furman/trigraph/results
                 let listOfLetters = ['AND','ING','ION','ENT','EST','ONE','FOR','THI','THR','TIO','INE','GHT','OUR','STO','IVE','TWO','EEN','ORT','EVE','TOP','ATI','TEE','FOU','NTH','WEN','NIN','VEN','TWE','NTY','HRE']
                 selectLetters = listOfLetters[Math.floor(Math.random()*listOfLetters.length)];
-                document.getElementById("text-letters").innerHTML = selectLetters;
-                innerCard.style.transform = 'rotateY(-180deg)';
+                // set & animate new letters
+                lettersElement = document.getElementById("text-letters");
+                lettersElement.classList.add('pre-animation');
+                lettersElement.innerHTML = selectLetters;
+                setTimeout(function(){
+                    lettersElement.classList.remove('pre-animation')
+                },100)
             }
             function startTimer(e) {
                 timer.innerHTML = 30;
