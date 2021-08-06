@@ -35,9 +35,10 @@
                 // set & animate new letters
                 lettersElement = document.getElementById("text-letters");
                 lettersElement.classList.add('pre-animation');
-                lettersElement.innerHTML = selectLetters;
+                lettersElement.innerHTML = "";
                 setTimeout(function(){
-                    lettersElement.classList.remove('pre-animation')
+                    lettersElement.classList.remove('pre-animation');
+                    lettersElement.innerHTML = selectLetters;
                 },800)
             }
             function startTimer(e) {
