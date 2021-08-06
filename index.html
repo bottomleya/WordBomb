@@ -43,8 +43,8 @@
             }
             function startTimer(e) {
                 timer.innerHTML = 30;
-                $("#flip-card").toggleClass("active-animatioon");
                 document.getElementById("btnStartTimer").style.visibility = "hidden";
+                $("#flip-card").toggleClass("active-animatioon");
                 
                 timerCall = setInterval(function() {
                     timer.innerHTML = timer.innerHTML - 1;
@@ -112,6 +112,18 @@
               <div> Next Player 1 </div>
               <div> Next Player 2 </div>
           </div>
+            <div class="container"><span class="user">User 1</span>
+
+            <div class="selectOptions">
+                <div class="myOptions">
+                    <div class="option volvo">Volvo</div>
+                    <div class="option saab">Saab</div>
+                    <div class="option mercedes">Mercedes</div>
+                    <div class="option audi">Audi</div>
+                </div>
+                <div class="select user1">User 1</div>
+            </div>
+        </div>
           <p> Letters can be used in </p>
           <a id="start-text" class="wordSection-Active">Start</a>
             <a>&#x25CF;</a>
@@ -136,6 +148,31 @@
         if(e.code === "Enter"){
             addPlayer(e); 
         }
+    });
+        $(".select").hover(function () {
+        $(this).siblings(".myOptions").css("display", "block");
+        $(this).css("background-color", "grey");
+    }, function () {
+        $(this).siblings(".myOptions").css("display", "none");
+    });
+    $(".myOptions").hover(function () {
+        $(this).css("display", "block");
+    }, function () {
+        $(this).css("display", "none");
+        $(this).siblings(".select").css("background-color", "#ddd");
+    });
+    $(".option").hover(function () {
+        $(this).css("background-color", "#123456");
+    }, function () {
+        $(this).css("background-color", "#ddd");
+        var selection = $(this).html();
+        if (selection == $(this).parent().siblings(".select").html()) $(this).css("background-color", "grey");
+    });
+    $(".option").click(function () {
+        var selection = $(this).html();
+        $(this).parent().siblings(".select").html(selection);
+        $(this).siblings().css("background-color", "#ddd");
+        $(this).css("background-color", "grey");
     });
     </script>
 </html>
