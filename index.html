@@ -38,7 +38,19 @@
               }
             }
             
+            function setUpPlayers(e) {
+                allPlayerElements = document.querySelectorAll(".playerList p");
+                for (playerElement of allPlayerElements) {
+                    player = playerElement.innerHTML;
+                    
+                    //var newPlayerElement = document.createElement("p");
+                    //newPlayerElement.innerHTML = newPlayerName;
+                }
+                
+            }
+            
             function startGame(e) {
+                setUpPlayers();
                 innerCard = document.getElementById("innerCard");
                 innerCard.style.transform = 'rotateY(180deg)';
             }
@@ -93,8 +105,8 @@
                     var newPlayerElement = document.createElement("p");
                     newPlayerElement.innerHTML = newPlayerName;
                     newPlayerElement.addEventListener("click", removePlayer, false);
-                    newPlayerElement.onclick = "removePlayer(this)";
-                    $("#playerList").append(newPlayerElement);
+                    //newPlayerElement.onclick = "removePlayer(this)";
+                    $("#playerList").prepend(newPlayerElement);
                 }
             }
         </script>
@@ -114,7 +126,7 @@
           <h2>WordBomb</h2>
         <button id="btnStartGame" type="button" href='javascript:void();' onclick="startGame(event)">Click to Start Game</button>
             </br>
-          <button class="add-player-button" visibility="hidden"></button>
+          <button class="add-player-button-blank"></button>
           <label class="custom-field">
               <input id="newPlayerInput" type="text" placeholder="Enter Player...">
           </label>
@@ -127,7 +139,7 @@
             <div id="timer" class="timer">30</div>
         <button id="btnStartTimer" type="button" href='javascript:void();' onclick="startTimer(event)">Round 1 Start</button>
         <button id="btnNextPlayer" type="button" href='javascript:void();' onclick="changeOrder(event)">Next Player</button>
-            <div class="all-slides">
+            <div class="all-players">
               <div class="single-slide" data-order="2">
                 <h3>First slide </h3>
                 <p>Some text</p>
