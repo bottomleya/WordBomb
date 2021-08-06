@@ -280,6 +280,19 @@ button:hover {
   color: black;
 }
 
+
+.add-player-button-blank {
+  border: none;
+  width:42px;
+  height:42px;
+  background-color: inherit;
+  display: inline-block;
+  padding: 12px;
+  margin-top: 24px;
+  margin-left: 5px;
+  visibility: hidden;
+}
+
 /* On mouse-over */
 .add-player-button:hover {
   background: #eee;
