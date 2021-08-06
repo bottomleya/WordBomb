@@ -23,8 +23,8 @@ div h2 {
   transform: scale(1.5);
 }
 
-.round-letters .pre-animation {
-  opacity:0;
+.pre-animation {
+  opacity: 0;
   max-height: 0;
 }
 
