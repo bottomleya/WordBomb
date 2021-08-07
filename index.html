@@ -40,11 +40,18 @@
             
             function setUpPlayers(e) {
                 allPlayerElements = document.querySelectorAll(".playerList p");
+                idx = 1;
                 for (playerElement of allPlayerElements) {
                     player = playerElement.innerHTML;
                     
-                    //var newPlayerElement = document.createElement("p");
-                    //newPlayerElement.innerHTML = newPlayerName;
+                    var newPlayerElement = document.createElement("div");
+                    newPlayerElement.innerHTML = player;
+                    newPlayerElement.classList.add("single-slide");
+                    newPlayerElement.setAttribute("data-order",toString(idx));
+                    
+                    $("#playerSelector").prepend(newPlayerElement);
+                    idx = idx + 1;
+                    
                 }
                 
             }
@@ -141,24 +148,16 @@
         <button id="btnNextPlayer" type="button" href='javascript:void();' onclick="changeOrder(event)">Next Player</button>
             <div class="all-players">
               <div class="single-slide" data-order="2">
-                <h3>First slide </h3>
-                <p>Some text</p>
+                  Player 1
               </div>
               <div class="single-slide" data-order="3">
-                <h3>Second slide</h3>
-                <p>Some other text</p>
+                  Player 2
               </div>
               <div class="single-slide" data-order="1">
-                <h3>Third slide</h3>
-                <p>Yet some other text</p>
+                  Player 3
               </div>
             </div>
           <div id="playerSelector" class="hs">
-              <div> Previous Player 2 </div>
-              <div> Previous Player 1 </div>
-              <div> Live Player </div>
-              <div> Next Player 1 </div>
-              <div> Next Player 2 </div>
           </div>
           <p> Letters can be used in </p>
           <a id="start-text" class="wordSection-Active">Start</a>
