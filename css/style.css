@@ -59,14 +59,14 @@ div h2 {
 }
 
 /* Right slide*/
-.single-slide[data-order="next-1"] {
+.single-slide[player-position="next-1"] {
   left: 60vw;
   transform: translate(-120%) scale(0.8, 0.8);
   z-index: 2;
   opacity: 0.7;
 }
 /* Right slide*/
-.single-slide[data-order="next-2"] {
+.single-slide[player-position="next-2"] {
   left: 70vw;
   transform: translate(-120%) scale(0.6, 0.6);
   z-index: 2;
