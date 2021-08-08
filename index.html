@@ -13,27 +13,45 @@
         <title>WordBomb | Play with friends!</title>
         
         <script>
+            //GLOBAL VARIABLES
             var timerCall = null;
+            var totalPlayers = 0;
             
             function changeOrder() {
               const allSlides = document.querySelectorAll(".single-slide");
-              const previous = "1";
-              const current = "2";
-              const next = "3";
 
               for (const slide of allSlides) {
-                const order = slide.getAttribute("data-order");
-
-                switch (order) {
-                  case current:
-                    slide.setAttribute("data-order", previous);
-                    break;
-                  case next:
-                    slide.setAttribute("data-order", current);
-                    break;
-                  case previous:
-                    slide.setAttribute("data-order", next);
-                    break;
+                const order = slide.getAttribute("player-order");
+                const position = slide.getAttribute("player-position");
+                  
+                // shift positions based on player position
+                switch (position) {
+                    case "previous-2":
+                        slide.setAttribute("player-position", "hidden");
+                        break;
+                    case "previous-1":
+                        slide.setAttribute("player-position", "previous-2");
+                        break;
+                    case "current":
+                        slide.setAttribute("player-position", "previous-1");
+                        break;
+                    case "next-1":
+                        slide.setAttribute("player-position", "current");
+                        break;
+                    case "next-2":
+                        slide.setAttribute("player-position", "next-1");
+                        break;
+                }
+                // rotate player-order
+                if (order - 1) < 1 {
+                   newOrder = totalPlayers;
+                } else {
+                    newOrder = order - 1;
+                }
+                slide.setAttribute("player-order", newOrder);
+                // determine the new "next-2"
+                if (newOrder == 3) {
+                    slide.setAttribute("player-position", "next-2");
                 }
               }
             }
@@ -47,12 +65,28 @@
                     var newPlayerElement = document.createElement("div");
                     newPlayerElement.innerHTML = player;
                     newPlayerElement.classList.add("single-slide");
-                    newPlayerElement.setAttribute("data-order",toString(idx));
+                    newPlayerElement.setAttribute("player-order",idx);
+                    // set initial player positions
+                    switch (idx) {
+                        case 1:
+                            newPlayerElement.setAttribute("player-position", "current");
+                            break;
+                        case 2:
+                            newPlayerElement.setAttribute("player-position", "next");
+                            break;
+                        case 3:
+                            newPlayerElement.setAttribute("player-position", "next2");
+                            break;
+                        default:
+                            newPlayerElement.setAttribute("player-position", "hidden");
+                            break;
+                    }
                     
                     $("#playerSelector").prepend(newPlayerElement);
                     idx = idx + 1;
                     
                 }
+                totalPlayers = idx - 1;
                 
             }
             
