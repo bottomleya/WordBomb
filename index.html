@@ -58,6 +58,7 @@
             
             function setUpPlayers(e) {
                 allPlayerElements = document.querySelectorAll(".playerList p");
+                totalPlayers = allPlayerElements.length;
                 idx = 1;
                 for (playerElement of allPlayerElements) {
                     player = playerElement.innerHTML;
@@ -65,17 +66,17 @@
                     var newPlayerElement = document.createElement("div");
                     newPlayerElement.innerHTML = player;
                     newPlayerElement.classList.add("single-slide");
-                    newPlayerElement.setAttribute("player-order",idx);
+                    newPlayerElement.setAttribute("player-order",totalPlayers-idx);
                     // set initial player positions
                     switch (idx) {
                         case 1:
                             newPlayerElement.setAttribute("player-position", "current");
                             break;
                         case 2:
-                            newPlayerElement.setAttribute("player-position", "next");
+                            newPlayerElement.setAttribute("player-position", "next-1");
                             break;
                         case 3:
-                            newPlayerElement.setAttribute("player-position", "next2");
+                            newPlayerElement.setAttribute("player-position", "next-2");
                             break;
                         default:
                             newPlayerElement.setAttribute("player-position", "hidden");
@@ -86,7 +87,6 @@
                     idx = idx + 1;
                     
                 }
-                totalPlayers = idx - 1;
                 
             }
             
