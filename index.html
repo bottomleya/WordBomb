@@ -68,7 +68,7 @@
                     newPlayerElement.classList.add("single-slide");
                     newPlayerElement.setAttribute("player-order",totalPlayers-idx+1);
                     // set initial player positions
-                    switch (idx) {
+                    switch (totalPlayers-idx+1) {
                         case 1:
                             newPlayerElement.setAttribute("player-position", "current");
                             break;
@@ -149,6 +149,7 @@
                     //newPlayerElement.onclick = "removePlayer(this)";
                     $("#playerList").prepend(newPlayerElement);
                 }
+                document.getElementById("newPlayerInput").value = "";
             }
         </script>
         
