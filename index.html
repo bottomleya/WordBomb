@@ -66,7 +66,7 @@
                     var newPlayerElement = document.createElement("div");
                     newPlayerElement.innerHTML = player;
                     newPlayerElement.classList.add("single-slide");
-                    newPlayerElement.setAttribute("player-order",idx);
+                    newPlayerElement.setAttribute("player-order",totalPlayers-idx+1);
                     // set initial player positions
                     switch (idx) {
                         case 1:
