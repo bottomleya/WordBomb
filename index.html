@@ -182,9 +182,9 @@
         <div class="flip-card-back">
             <div id="timer" class="timer">30</div>
         <button id="btnStartTimer" type="button" href='javascript:void();' onclick="startTimer(event)">Round <a id="roundNumber"> 1</a> Start</button>
-        <button id="btnNextPlayer" type="button" href='javascript:void();' onclick="changeOrder(event)">Next Player</button>
           <div id="playerSelector" class="hs">
           </div>
+        <button id="btnNextPlayer" type="button" href='javascript:void();' onclick="changeOrder(event)">&#9654;</button>
           <div>
           <p> Letters can be used... </p>
           <a id="start-text" class="wordSection-Active">Start</a>
@@ -207,6 +207,13 @@
     <script>
                
     var inputElement = document.getElementById("newPlayerInput");
+        
+        
+    document.body.onkeyup = function(e){
+        if(e.keyCode == 32){
+            changerOrder();
+        }
+    }
     inputElement.addEventListener("keydown", function(e) {
         if(e.code === "Enter"){
             addPlayer(e); 
