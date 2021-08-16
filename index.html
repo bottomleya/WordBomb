@@ -116,8 +116,9 @@
                 },800)
             }
             function startTimer(e) {
-                timer.innerHTML = 30;
                 document.getElementById("btnStartTimer").style.visibility = "hidden";
+                let listOfTimers = [25, 30, 30, 35, 35, 40, 40, 45, 50]
+                timer.innerHTML = listofTimers[Math.floor(Math.random()*listOfTimers.length)];
                 getNewLetters();
                 $("#flip-card").toggleClass("active-animatioon");
                 
@@ -135,7 +136,42 @@
                 document.getElementById("text-letters").innerHTML = "";
                 document.getElementById("btnStartTimer").style.visibility = "visible";
                 document.getElementById("roundNumber").innerHTML = parseInt(document.getElementById("roundNumber").innerHTML) + 1;
+                setLetterPositions();
             }
+            
+            function setLetterPositions(e) {
+                let listOfPositions = ["Start-Middle", "Middle-End", "Start-Middle-End"]
+                position = listOfPositions[Math.floor(Math.random()*listOfPositions.length)];
+                switch (position) {
+                    case "Start-Middle":
+                        document.getElementById("start-text").className = "wordSection-Active";
+                        document.getElementById("middle-text").className = "wordSection-Active";
+                        document.getElementById("end-text").className = "wordSection-Inactive";
+                        break;
+                    case "Middle-End":
+                        document.getElementById("start-text").className = "wordSection-Inactive";
+                        document.getElementById("middle-text").className = "wordSection-Active";
+                        document.getElementById("end-text").className = "wordSection-Active";
+                        break;
+                    case "Start-Middle-End":
+                        document.getElementById("start-text").className = "wordSection-Active";
+                        document.getElementById("middle-text").className = "wordSection-Active";
+                        document.getElementById("end-text").className = "wordSection-Active";
+                        break;
+                    default:
+                        document.getElementById("start-text").className = "wordSection-Active";
+                        document.getElementById("middle-text").className = "wordSection-Active";
+                        document.getElementById("end-text").className = "wordSection-Active";
+                        break;
+                }
+                        
+            }
+            
+          <a id="start-text" class="wordSection-Active">Start</a>
+            <a>&#x25CF;</a>
+          <a id="middle-text" class="wordSection-Active"> Middle</a>
+            <a>&#x25CF;</a>
+          <a id = "end-text" class="wordSection-Inactive">End</a>
             
             function removePlayer() {
                 console.log(this);//elem.parentNode.removeChild(elem);
