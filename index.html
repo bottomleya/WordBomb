@@ -118,6 +118,7 @@
             function startTimer(e) {
                 timer.innerHTML = 30;
                 document.getElementById("btnStartTimer").style.visibility = "hidden";
+                getNewLetters();
                 $("#flip-card").toggleClass("active-animatioon");
                 
                 timerCall = setInterval(function() {
@@ -131,8 +132,9 @@
                 $("#flip-card").toggleClass("active-animatioon");
                 $("#timer").innerHTML = "30"
                 clearInterval(timerCall);
-                
+                document.getElementById("text-letters").innerHTML = "";
                 document.getElementById("btnStartTimer").style.visibility = "visible";
+                document.getElementById("roundNumber").innerHTML = parseInt(document.getElementById("roundNumber").innerHTML) + 1;
             }
             
             function removePlayer() {
@@ -179,7 +181,7 @@
           
         <div class="flip-card-back">
             <div id="timer" class="timer">30</div>
-        <button id="btnStartTimer" type="button" href='javascript:void();' onclick="startTimer(event)">Round 1 Start</button>
+        <button id="btnStartTimer" type="button" href='javascript:void();' onclick="startTimer(event)">Round <a id="roundNumber"> 1</a> Start</button>
         <button id="btnNextPlayer" type="button" href='javascript:void();' onclick="changeOrder(event)">Next Player</button>
           <div id="playerSelector" class="hs">
           </div>
@@ -194,7 +196,7 @@
         </div>
         </br>
         <div id="round-letters">
-          <h1 id="text-letters" class="round-letters">INT</h1>
+          <h1 id="text-letters" class="round-letters"></h1>
         </div>
         </div>
       </div>
