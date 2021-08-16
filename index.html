@@ -16,6 +16,9 @@
             //GLOBAL VARIABLES
             var timerCall = null;
             var totalPlayers = 0;
+            // https://www.sporcle.com/games/furman/trigraph/results
+            var listOfLetters = ['AND','ING','ION','ENT','EST','ONE','FOR','THI','THR','TIO','INE','GHT','OUR','STO','IVE','TWO','EEN','ORT','EVE','TOP','ATI','TEE','FOU','NTH','WEN','NIN','VEN','TWE','NTY','HRE']
+            var usedLetters = [];
             
             function changeOrder() {
               const allSlides = document.querySelectorAll(".single-slide");
@@ -103,9 +106,11 @@
             function getNewLetters(e) {
                 //innerCard = document.getElementById("innerCard");
                 //innerCard.style.transform = 'rotateY(180deg)';
-                // https://www.sporcle.com/games/furman/trigraph/results
-                let listOfLetters = ['AND','ING','ION','ENT','EST','ONE','FOR','THI','THR','TIO','INE','GHT','OUR','STO','IVE','TWO','EEN','ORT','EVE','TOP','ATI','TEE','FOU','NTH','WEN','NIN','VEN','TWE','NTY','HRE']
-                selectLetters = listOfLetters[Math.floor(Math.random()*listOfLetters.length)];
+                randomIndex = Math.floor(Math.random()*listOfLetters.length);
+                selectLetters = listOfLetters[randomIndex];
+                usedLetters.push(selectLetters);
+                listOfLetters.splice(randomIndex,1);
+                
                 // set & animate new letters
                 lettersElement = document.getElementById("text-letters");
                 lettersElement.classList.add('pre-animation');
